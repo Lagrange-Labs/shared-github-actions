@@ -7,9 +7,6 @@ on:
         description: Release Level
         required: true
         type: string # Can accept "patch", "minor", or "major"
-    secrets:
-      GITHUB_TOKEN:
-        required: true
 
 jobs:
   make-release-pr:
