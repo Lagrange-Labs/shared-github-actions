@@ -3,7 +3,7 @@ name: Release PR Workflow
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      GH_TOKEN:
         required: true
 
     inputs:
@@ -29,7 +29,7 @@ jobs:
       - uses: cargo-bins/release-pr@v2
         with:
           version: ${{ inputs.bump }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN}}
           # Keep all the crates versions in sync
           crate-release-all: true
           pr-meta-comment: false
